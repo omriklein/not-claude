@@ -38,11 +38,11 @@ export function startSpinner(): void {
   }, 80);
 }
 
-export function stopSpinner(): void {
+export function stopSpinner(keep = false): void {
   if (!_interval) return;
   clearInterval(_interval);
   _interval = null;
-  process.stdout.write(c.clearLine);
+  process.stdout.write(keep ? '\n' : c.clearLine);
 }
 
 function randomVerb(): string {

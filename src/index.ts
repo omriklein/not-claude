@@ -28,19 +28,20 @@ function main(): void {
     terminal: true,
   });
 
-  // Pre-draw the bottom ─── two lines below, then move cursor back up so
-  // readline draws the top ─── and > on top of the reserved space.
-  const _rawPrompt = rl.prompt.bind(rl);
-  (rl as any).prompt = (preserveCursor?: boolean) => {
-    process.stdout.write(`\n\n${hr()}\x1b[2A\r`);
-    _rawPrompt(preserveCursor);
+  // After every redraw (typing, backspace, prompt), append the bottom ───
+  // and move the cursor back to where readline expects it.
+  const _rawRefreshLine = (rl as any)._refreshLine.bind(rl);
+  (rl as any)._refreshLine = () => {
+    _rawRefreshLine();
+    const col = 2 + ((rl as any).cursor as number);
+    process.stdout.write(`\n\r${hr()}\x1b[1A\r`);
+    if (col > 0) process.stdout.write(`\x1b[${col}C`);
   };
 
   const commands = buildCommands(rl);
 
   const resumeAfterSpin = () => {
-    stopSpinner();
-    console.log('');
+    stopSpinner(true);
     rl.prompt();
   };
 
