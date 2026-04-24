@@ -1,10 +1,10 @@
 {
-  "name": "claude_fake",
+  "name": "not-claude",
   "version": "1.0.0",
   "description": "A fake Claude Code CLI that thinks forever. Perfect for looking busy.",
   "main": "dist/index.js",
   "bin": {
-    "claudee": "./dist/index.js"
+    "not-claude": "./dist/index.js"
   },
   "scripts": {
     "build": "tsc",
@@ -30,12 +30,12 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/omriklein/claude_fake"
+    "url": "https://github.com/omriklein/not-claude"
   },
   "bugs": {
-    "url": "https://github.com/omriklein/claude_fake/issues"
+    "url": "https://github.com/omriklein/not-claude/issues"
   },
-  "homepage": "https://github.com/omriklein/claude_fake#readme",
+  "homepage": "https://github.com/omriklein/not-claude#readme",
   "devDependencies": {
     "@types/node": "^25.6.0",
     "typescript": "^6.0.3"

@@ -1,9 +1,9 @@
-# claude_fake
+# not-claude
 
 > A drop-in fake for the Claude Code CLI. Looks identical. Thinks forever. Does nothing.
 
-[![npm version](https://img.shields.io/npm/v/claude_fake.svg)](https://www.npmjs.com/package/claude_fake)
-[![npm downloads](https://img.shields.io/npm/dm/claude_fake.svg)](https://www.npmjs.com/package/claude_fake)
+[![npm version](https://img.shields.io/npm/v/not-claude.svg)](https://www.npmjs.com/package/not-claude)
+[![npm downloads](https://img.shields.io/npm/dm/not-claude.svg)](https://www.npmjs.com/package/not-claude)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
 ---
@@ -12,24 +12,24 @@
 
 Sometimes you just need Claude to think for a while. A long while. Indefinitely, even.
 
-`claude_fake` is a terminal impersonator — it mimics the look, feel, and spinner of the real Claude Code CLI down to the last braille dot. Type a prompt, watch it think, take a break. It will still be thinking when you get back.
+`not-claude` is a terminal impersonator — it mimics the look, feel, and spinner of the real Claude Code CLI down to the last braille dot. Type a prompt, watch it think, take a break. It will still be thinking when you get back.
 
 ---
 
 ## Install
 
 ```bash
-npm install -g claude_fake
+npm install -g not-claude
 ```
 
 ---
 
 ## Usage
 
-Just type `claude_fake` instead of `claude`:
+Just type `not-claude` instead of `claude`:
 
 ```bash
-claude_fake
+not-claude
 ```
 
 Then type any prompt and watch it "think" forever.
